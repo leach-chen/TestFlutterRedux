@@ -2,16 +2,16 @@ import 'package:TestFlutterRedux/page/home/home_state.dart';
 import 'package:redux/redux.dart';
 
 final HomeReducer = combineReducers<HomeState>([
-  TypedReducer<HomeState, UpdateUserNameAction>(_update),
+  TypedReducer<HomeState, UpdateHomeNameAction>(_update),
 ]);
 
-HomeState _update(HomeState homeState, UpdateUserNameAction addAction) {
-  addAction.homeState.name = "小明";
+HomeState _update(HomeState homeState, UpdateHomeNameAction addAction) {
+  addAction.homeState.name = "11111111111";
   homeState = addAction.homeState;
   return homeState;
 }
 
-class UpdateUserNameAction {
+class UpdateHomeNameAction {
   HomeState homeState;
-  UpdateUserNameAction(this.homeState);
+  UpdateHomeNameAction(this.homeState);
 }

@@ -2,5 +2,5 @@
 class HomeState
 {
   String name;
-  HomeState.initData() : name = "匿名";
+  HomeState.initData() : name = "HomePage";
 }

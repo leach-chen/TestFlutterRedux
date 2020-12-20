@@ -29,10 +29,10 @@ class _HomePageState extends State<HomePage>
                     onTap: () {
                         //final snackBar = new SnackBar(content: new Text('你点击了登录注册'));
                         //Scaffold.of(context).showSnackBar(snackBar);
-                        /* Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+                       Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
                           return MyCenterPage();
-                        })); */
-                        store.dispatch(UpdateUserNameAction(store.state.homeState));
+                        })); 
+                        store.dispatch(UpdateHomeNameAction(store.state.homeState));
                     },
                     child: new Container(
                       alignment: Alignment.center,
@@ -52,7 +52,8 @@ class _HomePageState extends State<HomePage>
                       ),
                     ),
                   ),
-                  Text(store.state.homeState.name)
+                  Text(store.state.homeState.name),
+                  Text(store.state.myCenterState.name)
                 ],
               ),
             ),
