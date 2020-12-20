@@ -1,1 +1,0 @@
-enum Action1 { increment }
