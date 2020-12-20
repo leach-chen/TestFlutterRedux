@@ -27,7 +27,8 @@ class _MyCenterPageState extends State<MyCenterPage>
                 children: [
                   new GestureDetector(
                     onTap: () {
-                        store.dispatch(UpdateMyCenterNameAction(store.state.myCenterState));
+                        //store.dispatch(UpdateHomeNameAction(store.state.homeState,store.state.myCenterState));
+                        //store.dispatch(UpdateMyCenterNameAction(store.state.myCenterState));
                     },
                     child: new Container(
                       alignment: Alignment.center,
