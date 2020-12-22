@@ -1,8 +1,8 @@
 
-import 'package:TestFlutterRedux/other/base/BaseAction.dart';
+import 'package:TestFlutterRedux/other/base/BasePresenter.dart';
 import 'package:TestFlutterRedux/other/base/BaseImpl.dart';
 import 'package:TestFlutterRedux/other/store/ReduxState.dart';
-import 'package:TestFlutterRedux/page/home/home_action.dart';
+import 'package:TestFlutterRedux/page/home/home_presenter.dart';
 import 'package:TestFlutterRedux/page/mycenter/mycenter_page.dart';
 import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
@@ -11,14 +11,14 @@ class HomePage extends BaseImpl {
 
   @override
   State<StatefulWidget> initPage() {
-    var impl = _HomePageState<HomeAction>();
-    HomeAction<_HomePageState>(impl);
+    var impl = _HomePageState<HomePresenter>();
+    HomePresenter<_HomePageState>(impl);
     return impl;
   }
 }
 
 
-class _HomePageState <T extends BaseAction> extends BaseImplState
+class _HomePageState <T extends BasePresenter> extends BaseImplState
 {
     @override
     initWidget(Store<ReduxState> store) {
@@ -35,7 +35,7 @@ class _HomePageState <T extends BaseAction> extends BaseImplState
 
                       //store.state.homeState.name = "bbbbbbbbbbbbbbbb";
                       //store.dispatch(UpdateHomeNameAction(store.state.homeState));
-                      (mAction as HomeAction).updateName();
+                      (mAction as HomePresenter).updateName();
                   },
                   child: new Container(
                     alignment: Alignment.center,

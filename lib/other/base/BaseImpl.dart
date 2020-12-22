@@ -1,4 +1,4 @@
-import 'package:TestFlutterRedux/other/base/BaseAction.dart';
+import 'package:TestFlutterRedux/other/base/BasePresenter.dart';
 import 'package:TestFlutterRedux/other/base/IBaseImpl.dart';
 import 'package:TestFlutterRedux/other/base/IBaseImplState.dart';
 import 'package:TestFlutterRedux/other/store/ReduxState.dart';
@@ -14,7 +14,7 @@ abstract class BaseImpl extends StatefulWidget  implements IBaseImpl
     }
 }
 
-abstract class BaseImplState<T extends BaseAction> extends State<BaseImpl>  implements IBaseImplState{
+abstract class BaseImplState<T extends BasePresenter> extends State<BaseImpl>  implements IBaseImplState{
 
       BuildContext mContext;
       T mAction;

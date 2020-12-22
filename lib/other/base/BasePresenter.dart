@@ -2,13 +2,13 @@ import 'package:TestFlutterRedux/other/base/BaseImpl.dart';
 import 'package:TestFlutterRedux/other/store/ReduxState.dart';
 import 'package:redux/redux.dart';
 
-class BaseAction 
+class BasePresenter 
 {
     Store<ReduxState> mStore;
     
     BaseImplState mImpl;
 
-    BaseAction(BaseImplState impl)
+    BasePresenter(BaseImplState impl)
     {
         this.mImpl = impl;
         impl.setAction(this);
